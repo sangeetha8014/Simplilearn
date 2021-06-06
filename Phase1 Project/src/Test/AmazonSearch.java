@@ -1,5 +1,7 @@
 package Test;
 
+import java.io.File;
+import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +11,10 @@ import java.sql.Statement;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -73,6 +78,21 @@ public class AmazonSearch {
 				for(WebElement e : results) {
 					System.out.println(e.getText());
 				}
+				
+				
+		        
+		        TakesScreenshot TsObj = (TakesScreenshot)driver;
+		        
+		        File myFile = TsObj.getScreenshotAs(OutputType.FILE);
+		        
+		        try {
+		        
+		        FileUtils.copyFile(myFile, new File("test.png"));
+		        }catch (IOException e) {
+		        	// TODO Auto-generated catch block
+		        	e.printStackTrace();
+		        			        	
+		        }
 			}
 
 		} catch (ClassNotFoundException e) {
