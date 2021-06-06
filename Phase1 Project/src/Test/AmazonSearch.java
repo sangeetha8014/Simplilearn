@@ -81,6 +81,8 @@ public class AmazonSearch {
 		} catch (SQLException e) {
 			System.out.println("SQL Exception");
 		}
+		
+		driver.close();
 	}
-
-}
+	
+	}
