@@ -88,6 +88,7 @@ public class AmazonSearch {
 		        try {
 		        
 		        FileUtils.copyFile(myFile, new File("test.png"));
+		      
 		        }catch (IOException e) {
 		        	// TODO Auto-generated catch block
 		        	e.printStackTrace();
