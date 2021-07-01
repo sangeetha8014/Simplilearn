@@ -5,13 +5,13 @@
   <parameter name="username" value="abc@xyz.com"/>
   <test thread-count="5" name="Application1 Test(failed)">
     <classes>
-      <class name="ShoppingTest.shoppingtest">
+      <class name="Test.LoginTest">
         <methods>
+          <include name="LoginTestcase2"/>
           <include name="setup"/>
-          <include name="Login"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- ShoppingTest.shoppingtest -->
+      </class> <!-- Test.LoginTest -->
     </classes>
   </test> <!-- Application1 Test(failed) -->
 </suite> <!-- Failed suite [Sanity Suite] -->
