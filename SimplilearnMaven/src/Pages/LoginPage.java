@@ -86,7 +86,7 @@ public class LoginPage {
 		
 		
 		String ActMsg = Error.getText();
-		String ExpMsg = "The email or password you have entered is invalid.";
+		String ExpMsg = "The email or password you have entered is invalid";
 				
 		Assert.assertTrue(Error.isDisplayed());
 		Assert.assertEquals(ActMsg, ExpMsg);
